@@ -1,0 +1,9 @@
+$phone: 480px
+$tablet: 980px
+
+=bg_slider($slider_name)
+  background-image: url('../img/slides/#{$slider_name}_slide_1920x1200.jpg')
+  @media (max-width: $tablet)
+    background-image: url('../img/slides/#{$slider_name}_slide_1280x800.jpg')
+  @media (max-width: $phone)
+    background-image: url('../img/slides/#{$slider_name}_slide_480x800.jpg')
