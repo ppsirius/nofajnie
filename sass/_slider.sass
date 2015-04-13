@@ -27,25 +27,38 @@ svg
   cursor: all-scroll
 
 .slider-control
-  z-index: 2
+  z-index: 999
   position: absolute
-  top: 0
-  width: 12%
-  height: 100%
+  bottom: 2%
+  width: 100px
+  height: 100px
   transition: opacity 0.3s
   will-change: opacity
-  opacity: 0
+  opacity: 0.5
   &.inactive:hover
     cursor: auto
   &:not(.inactive):hover
     opacity: 1
     cursor: pointer
   &.left
-    left: 0
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.18) 0%, transparent 100%)
+    left: 1%
   &.right
-    right: 0
-    background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.18) 100%)
+    right: 1%
+  img
+    width: 100px
+
+.logo
+  position: absolute
+  left: 8%
+  top: 10%
+  z-index: 2
+  max-width: 200px
+  transition: transform 0.5s 0.5s, opacity 0.2s 0.5s
+  will-change: transform, opacity
+  transform: translate3d(-20%, 0, 0)
+  opacity: 0
+
+
 
 .slider
   z-index: 1
@@ -65,12 +78,12 @@ svg
   height: 100%
   overflow: hidden
   &.active
-    .slide__overlay, .slide__text
+    .slide__overlay, .slide__text, .logo
       opacity: 1
       transform: translateX(0)
 
-$color_slide_1: rgba(196, 2, 72, 0.9)
-$color_slide_2: rgba(226,122,79, 0.9)
+$color_slide_1: rgba(247, 51, 155, 0.9)
+$color_slide_2: rgba(60,60,62, 0.9)
 $color_slide_3: rgba(49,8,40, 0.9) 
 $color_slide_4: rgba(45,56,122, 0.9)
 
@@ -188,6 +201,9 @@ $color_slide_4: rgba(45,56,122, 0.9)
 
 .slide__text-desc
   margin-bottom: 1.5rem
+  font-family: $cardo
+  font-size: 1.2rem
+  line-height: 1.8rem
 
 @media (max-width: 980px)
   .slide__text-desc

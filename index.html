@@ -12,17 +12,25 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/app.css">
+        <link href='http://fonts.googleapis.com/css?family=Cardo&subset=latin-ext' rel='stylesheet' type='text/css'>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
 
       <div class="slider-container">
-        <div class="slider-control left inactive"></div>
-        <div class="slider-control right"></div>
+        <div class="slider-control left inactive">
+          <img src="img/icon.svg#arrow_left" title="Left">
+        </div>
+        <div class="slider-control right">
+          <img src="img/icon.svg#arrow_right" title="Right">
+        </div>
         <div class="slider">
           <div class="slide slide-0 active">
             <div class="slide__bg"></div>
             <div class="slide__content">
+              <div class="logo">
+                <img src="img/logo_nofajnie.svg#white" title="Logo nofajnie">
+              </div>
               <svg class="slide__overlay" viewBox="0 0 430 405" preserveAspectRatio="xMaxYMax slice">
                 <path class="slide__overlay-path" d="M0,0 190,0 430,405 0,405" />
               </svg>
@@ -41,7 +49,7 @@
               </svg>
               <div class="slide__text">
                 <h1 class="slide__text-heading">NO CÓŻ</h1>
-                <p class="slide__text-desc">branding</p>
+                <p class="slide__text-desc">pchnąć w tę łódź jeża lub ośm skrzyń fig</p>
                 <a class="slide__text-link">MORE</a>
               </div>
             </div>
@@ -77,9 +85,24 @@
 
 
       <section id="offer">
+
         <div class="box_offer">
           <div class="icon">
-            <img src="img/icon_offer.svg#www" title="WWW">
+            <img src="img/icon.svg#branding" title="Branding">
+          </div>
+          <div class="line"></div>
+          <h2>Branding</h2>
+          <ul>
+            <li>- branding -</li>
+            <li>- strategia marki -</li>
+            <li>- projektowanie logo -</li>
+          </ul>
+          <div class="line"></div>
+        </div>
+
+        <div class="box_offer">
+          <div class="icon">
+            <img src="img/icon.svg#www" title="WWW">
           </div>
           <div class="line"></div>
           <h2>Projekty WWW</h2>
@@ -94,7 +117,7 @@
 
         <div class="box_offer">
           <div class="icon">
-            <img src="img/icon_offer.svg#dtp" title="Poligrafia">
+            <img src="img/icon.svg#dtp" title="Poligrafia">
           </div>
           <div class="line"></div>
           <h2>Poligrafia</h2>
@@ -109,7 +132,7 @@
 
         <div class="box_offer">
           <div class="icon">
-            <img src="img/icon_offer.svg#creation" title="Kreacja">
+            <img src="img/icon.svg#creation" title="Kreacja">
           </div>
           <div class="line"></div>
           <h2>Kreacja</h2>
@@ -121,33 +144,20 @@
           <div class="line"></div>
         </div>
 
-        <div class="box_offer">
-          <div class="icon">
-            <img src="img/icon_offer.svg#branding" title="Branding">
-          </div>
-          <div class="line"></div>
-          <h2>Branding</h2>
-          <ul>
-            <li>- branding -</li>
-            <li>- strategia marki -</li>
-            <li>- projektowanie logo -</li>
-          </ul>
-          <div class="line"></div>
-        </div>
       </section>
 
       <section class="portfolio">
         <div class="box_portfolio">
-          <a href="#"><img src="img/portfolio3.jpg"></a>
+          <img src="img/portfolio3.jpg" data-project="figle">
         </div>
         <div class="box_portfolio">
-          <a href="#"><img src="img/portfolio3.jpg"></a>
+          <img src="img/portfolio3.jpg" data-project="migle">
         </div>
         <div class="box_portfolio">
-          <a href="#"><img src="img/portfolio3.jpg"></a>
+          <img src="img/portfolio3.jpg" data-project="figle">
         </div>
         <div class="box_portfolio">
-          <a href="#"><img src="img/portfolio3.jpg"></a>
+          <img src="img/portfolio3.jpg" data-project="figle">
         </div>
       </section>
 
@@ -157,10 +167,10 @@
         <h5>tel</h5>
         <h2>+48 508 066 114</h2>
         <div class="social">
-          <img src="img/icon_offer.svg#fb" title="Facebook">
-          <a href="#"><img src="img/icon_offer.svg#behance" title="Behance"></a>
-          <a href="#"><img src="img/icon_offer.svg#twitter" title="Twitter"></a>
-          <a href="#"><img src="img/icon_offer.svg#instagram" title="Instagram"></a>
+          <a href="#"><img src="img/icon.svg#fb" title="Facebook"></a>
+          <a href="#"><img src="img/icon.svg#behance" title="Behance"></a>
+          <a href="#"><img src="img/icon.svg#twitter" title="Twitter"></a>
+          <a href="#"><img src="img/icon.svg#instagram" title="Instagram"></a>
         </div>
       </section>
 
