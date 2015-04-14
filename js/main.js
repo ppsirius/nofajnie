@@ -1,5 +1,13 @@
 $('.box_portfolio img').click(function() {
-  $(this).after('<div class="project_content"><div class="close"><img src="img/icon.svg#cross" title="Close"></div><div class="content"><div class="project_title"></div><div class="project_description"></div><div class="project_img"></div></div></div>');
+  slideProject();
+});
+
+$('.slide__text-link').click(function() {
+  slideProject();
+});
+
+function slideProject() {
+  $('.box_portfolio img').after('<div class="project_content animated slideInDown"><div class="close"><img src="img/icon.svg#cross" title="Close"></div><div class="content"><div class="project_title"></div><div class="project_description"></div><div class="project_img"></div></div></div>');
   var clickedProject = $(this).data("project");
   var projectName = eval(clickedProject).name;
   var projectDescription = eval(clickedProject).description;
@@ -9,13 +17,12 @@ $('.box_portfolio img').click(function() {
   $.each(projectUrl, function(index, value) {
     $('.project_img').append('<img src="'+ value +'">');
   });
+}
 
-
-});
 
 $(document).on('click', '.close', function() {
-  $('.project_content').css('display', 'none');
-  $('.project_content').remove();
+  $('.project_content').addClass('slideOutUp');
+  setTimeout(function(){$('.project_content').remove()},1000);
 });
 
 function Project(name, description, url) {
