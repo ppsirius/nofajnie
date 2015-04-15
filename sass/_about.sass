@@ -1,0 +1,42 @@
+.about
+  clear: both
+  background: $light_blue
+  float: left
+  margin-left: auto
+  margin-right: auto
+  display: flex
+  flex-wrap: wrap
+  align-items: stretch
+  .box
+    width: 25%
+    float: left
+    color: $dark_blue
+    height:auto
+    overflow: hidden
+    @media (max-width: 980px) and  (min-width: 480px)
+      width: 50%
+      &:nth-child(3)
+        order: 2
+      &:nth-child(4)
+        order: 1
+    @media (max-width: 480px)
+      width: 100%
+      height: 250px  
+  .about_person
+    padding: 3%
+    @media (max-width: 480px)
+      padding: 6%
+  .person_description
+    font-family: $cardo
+    line-height: 1.6rem
+    padding: 20px 
+    position: relative
+  %person_img
+    background-position: center center
+    background-repeat: no-repeat
+  .ewelina
+    background-image: url(../img/ewelina.jpg) 
+    @extend %person_img
+  .piotrek
+    background-image: url(../img/piotrek.jpg) 
+    @extend %person_img

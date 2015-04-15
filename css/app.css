@@ -2,7 +2,8 @@ html, body {
   color: #fff;
   font-size: 14px;
   line-height: 16px;
-  font-family: "Montserrat" Arial, sans-serif; }
+  font-family: "Montserrat" Arial, sans-serif;
+  height: 100%; }
 
 @font-face {
   font-family: "Montserrat";
@@ -383,7 +384,7 @@ svg {
       display: none; } }
 #offer {
   background-color: #1e023f;
-  color: #00ffff;
+  color: #fff;
   width: 100%;
   overflow: hidden;
   padding: 2% 0; }
@@ -414,18 +415,19 @@ svg {
       margin: 30px auto; }
 
 .portfolio {
-  overflow: hidden; }
-  .portfolio .box_portfolio {
+  overflow: hidden;
+  clear: both; }
+  .portfolio .box {
     width: 25%;
     float: left;
     display: block; }
     @media (max-width: 768px) {
-      .portfolio .box_portfolio {
+      .portfolio .box {
         width: 50%; } }
     @media (max-width: 480px) {
-      .portfolio .box_portfolio {
+      .portfolio .box {
         width: 100%; } }
-    .portfolio .box_portfolio img {
+    .portfolio .box img {
       width: 100%; }
   .portfolio .project_content {
     position: fixed;
@@ -443,7 +445,6 @@ svg {
       right: 50px;
       top: 40px;
       width: 100px;
-      border: 1px solid #000;
       cursor: pointer; }
     .portfolio .project_content .content {
       padding: 40px 20px;
@@ -488,5 +489,48 @@ svg {
     padding: 0 10px; }
   .contact .social img {
     width: 30px; }
+
+.about {
+  clear: both;
+  background: #00ffff;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch; }
+  .about .box {
+    width: 25%;
+    float: left;
+    color: #1e023f;
+    overflow: hidden; }
+    @media (max-width: 980px) and (min-width: 480px) {
+      .about .box {
+        width: 50%; }
+        .about .box:nth-child(3) {
+          order: 2; }
+        .about .box:nth-child(4) {
+          order: 1; } }
+    @media (max-width: 480px) {
+      .about .box {
+        width: 100%;
+        height: 250px; } }
+  .about .about_person {
+    padding: 3%; }
+    @media (max-width: 480px) {
+      .about .about_person {
+        padding: 6%; } }
+  .about .person_description {
+    font-family: "Cardo" Arial, sans-serif;
+    line-height: 1.6rem;
+    padding: 20px;
+    position: relative; }
+  .about .ewelina, .about .piotrek {
+    background-position: center center;
+    background-repeat: no-repeat; }
+  .about .ewelina {
+    background-image: url(../img/ewelina.jpg); }
+  .about .piotrek {
+    background-image: url(../img/piotrek.jpg); }
 
 /*# sourceMappingURL=app.css.map */
