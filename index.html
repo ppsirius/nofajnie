@@ -18,15 +18,30 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
+      <div class="menu"><img src="img/hamburger.svg" title="Menu"></div>
+      <div class="menu_content">
+        <div class="close_menu"><img src="img/icon.svg#cross_white" title="Close"></div>
+        <nav>
+          <ul class='hover_animation'>
+            <li><a href="#home"><span data-hover="HOME">HOME</span></a></li>
 
-      <div class="slider-container">
+
+
+            <li><a href="#offer">OFERTA</a></li>
+            <li><a href="#about">O NAS</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+            <li><a href="#contact">KONTAKT</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="slider-container" name="home">
         <div class="slider-control left inactive">
           <img src="img/icon.svg#arrow_left" title="Left">
         </div>
         <div class="slider-control right">
           <img src="img/icon.svg#arrow_right" title="Right">
         </div>
-        <div class="slider">
+        <div class="slider" id="home">
           <div class="slide slide-0 active">
             <div class="slide__bg"></div>
             <div class="slide__content">
@@ -52,7 +67,7 @@
               <div class="slide__text">
                 <h1 class="slide__text-heading">NO CÓŻ</h1>
                 <p class="slide__text-desc">pchnąć w tę łódź jeża lub ośm skrzyń fig</p>
-                <a class="slide__text-link">MORE</a>
+                <a class="slide__text-link" data-project="azja">MORE</a>
               </div>
             </div>
           </div>
@@ -65,7 +80,7 @@
               <div class="slide__text">
                 <h1 class="slide__text-heading">NO CÓŻ</h1>
                 <p class="slide__text-desc">branding</p>
-                <a class="slide__text-link">MORE</a>
+                <a class="slide__text-link" data-project="gaska">MORE</a>
               </div>
             </div>
           </div>
@@ -78,7 +93,7 @@
               <div class="slide__text">
                 <h1 class="slide__text-heading">NO CÓŻ</h1>
                 <p class="slide__text-desc">branding</p>
-                <a class="slide__text-link">MORE</a>
+                <a class="slide__text-link" data-project="chmiel">MORE</a>
               </div>
             </div>
           </div>
@@ -147,7 +162,7 @@
         </div>
       </section>
 
-      <section class="about">
+      <section id="about">
         <div class="box ewelina"></div>
         <div class="box about_person">
           <h3>Ewelina</h3>
@@ -164,22 +179,34 @@ z pasji ilustratorką i dizajnerką. Rysunek i projektowanie jest  stałym eleme
         </div>
       </section>
 
-      <section class="portfolio">
+      <section id="portfolio">
         <div class="box">
-          <img src="img/portfolio3.jpg" data-project="figle">
+          <img src="img/portfolio/1_azja.jpg" data-project="azja">
         </div>
         <div class="box">
-          <img src="img/portfolio3.jpg" data-project="migle">
+          <img src="img/portfolio/2_chmiel.jpg" data-project="chmiel">
         </div>
         <div class="box">
-          <img src="img/portfolio3.jpg" data-project="figle">
+          <img src="img/portfolio/3_perfect.jpg"  data-project="perfect">
         </div>
         <div class="box">
-          <img src="img/portfolio3.jpg" data-project="figle">
+          <img src="img/portfolio/4_figle.jpg" data-project="figle">
+        </div>
+        <div class="box">
+          <img src="img/portfolio/5_flowers.jpg" data-project="flowers">
+        </div>
+        <div class="box">
+          <img src="img/portfolio/6_ilu.jpg" data-project="ilustrations">
+        </div>
+        <div class="box">
+          <img src="img/portfolio/7_pegaz.jpg"  data-project="pegaz">
+        </div>
+        <div class="box">
+          <img src="img/portfolio/8_gaska.jpg" data-project="gaska">
         </div>
       </section>
 
-      <section class="contact">
+      <section id="contact">
         <h5>e-mail</h5>
         <h2><a href="mailto:studio@nofajnie.com">studio@nofajnie.com</a></h2>
         <h5>tel</h5>

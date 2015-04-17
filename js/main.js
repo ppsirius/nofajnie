@@ -19,6 +19,26 @@ $(document).on('click', '.close', function() {
   setTimeout(function(){$('.project_content').remove()},1000);
 });
 
+$('.menu').click(showMenu);
+
+function showMenu() {
+  $('.menu_content').css("display", "block" );
+  $('.menu_content').addClass('animated slideInDown')
+  $('.menu_content').removeClass('slideOutUp');
+}
+
+$(document).on('click', '.close_menu', function() {
+  $('.menu_content').addClass('slideOutUp');
+  $('.menu_content').removeClass('slideInDown');
+});
+
+$(document).on('click', 'nav a', function() {
+  $('.menu_content').addClass('slideOutUp');
+  $('.menu_content').removeClass('slideInDown');
+});
+
+
+
 function Project(name, description, url) {
   this.name = name;
   this.description = description;
@@ -32,3 +52,17 @@ var migle = new Project('Migle',
                         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
                         [ 'img/figle1.jpg' ] );
            
+
+
+
+
+// hover animiation
+
+// var element = $('.hover_animation a');
+
+
+// $.each(element, function(index, value) {
+//   $(this).append('<span>'+ value +'</span>');
+// });
+
+// console.log(element.text());

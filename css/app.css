@@ -139,6 +139,83 @@ textarea {
   /* 2 */
   clear: both; }
 
+.menu {
+  position: fixed;
+  right: 30px;
+  top: 10px;
+  width: 50px;
+  cursor: pointer;
+  z-index: 999; }
+
+.menu_content {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1999;
+  background: #1e023f;
+  text-align: center; }
+  .menu_content .close_menu {
+    cursor: pointer;
+    position: fixed;
+    right: 0;
+    width: 100px;
+    height: 100px; }
+  .menu_content ul {
+    margin-top: 150px; }
+    .menu_content ul a {
+      margin: 1% 0;
+      font-size: 2.2rem;
+      line-height: 3.5rem;
+      text-decoration: none;
+      color: #00ffff; }
+
+.hover_animation a {
+  overflow: hidden;
+  padding: 0 4px;
+  height: 3.5rem; }
+  .hover_animation a span {
+    position: relative;
+    display: inline-block;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s; }
+    .hover_animation a span::before {
+      position: absolute;
+      top: 100%;
+      content: attr(data-hover);
+      font-weight: 700;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+  .hover_animation a:hover span, .hover_animation a:focus span {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    transform: translateY(-100%); }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  *:after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+nav a {
+  position: relative;
+  display: inline-block;
+  margin: 15px 25px;
+  outline: none;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px; }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -414,22 +491,22 @@ svg {
       background-color: #00ffff;
       margin: 30px auto; }
 
-.portfolio {
+#portfolio {
   overflow: hidden;
   clear: both; }
-  .portfolio .box {
+  #portfolio .box {
     width: 25%;
     float: left;
     display: block; }
     @media (max-width: 768px) {
-      .portfolio .box {
+      #portfolio .box {
         width: 50%; } }
     @media (max-width: 480px) {
-      .portfolio .box {
+      #portfolio .box {
         width: 100%; } }
-    .portfolio .box img {
+    #portfolio .box img {
       width: 100%; }
-  .portfolio .project_content {
+  #portfolio .project_content {
     position: fixed;
     z-index: 5;
     bottom: 0;
@@ -440,24 +517,24 @@ svg {
     overflow-y: auto;
     background: #fff;
     color: #1e023f; }
-    .portfolio .project_content .close {
+    #portfolio .project_content .close {
       position: fixed;
       right: 50px;
       top: 40px;
       width: 100px;
       cursor: pointer; }
-    .portfolio .project_content .content {
+    #portfolio .project_content .content {
       padding: 40px 20px;
       max-width: 980px;
       margin: 0 auto; }
-      .portfolio .project_content .content .project_description {
+      #portfolio .project_content .content .project_description {
         max-width: 75%;
         padding: 20px 40px;
         font-family: "Cardo" Arial, sans-serif;
         font-size: 1.2rem;
         line-height: 1.6rem;
         position: relative; }
-        .portfolio .project_content .content .project_description:before {
+        #portfolio .project_content .content .project_description:before {
           content: "";
           position: absolute;
           top: 28px;
@@ -467,30 +544,30 @@ svg {
           width: 30px;
           background-color: #1e023f; }
 
-.contact {
+#contact {
   background-color: #1e023f;
   color: #00ffff;
   text-align: center;
   padding: 40px 0; }
-  .contact img {
+  #contact img {
     padding: 40px 0; }
-  .contact h2, .contact h5, .contact a {
+  #contact h2, #contact h5, #contact a {
     color: #00ffff; }
-  .contact a {
+  #contact a {
     text-transform: none;
     text-decoration: none; }
-  .contact h5 {
+  #contact h5 {
     padding: 10px 0; }
-  .contact h2 {
+  #contact h2 {
     padding-bottom: 30px; }
-  .contact .logo_contact {
+  #contact .logo_contact {
     fill: #00ffff; }
-  .contact .social a {
+  #contact .social a {
     padding: 0 10px; }
-  .contact .social img {
+  #contact .social img {
     width: 30px; }
 
-.about {
+#about {
   clear: both;
   background: #00ffff;
   float: left;
@@ -499,38 +576,38 @@ svg {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch; }
-  .about .box {
+  #about .box {
     width: 25%;
     float: left;
     color: #1e023f;
     overflow: hidden; }
     @media (max-width: 980px) and (min-width: 480px) {
-      .about .box {
+      #about .box {
         width: 50%; }
-        .about .box:nth-child(3) {
+        #about .box:nth-child(3) {
           order: 2; }
-        .about .box:nth-child(4) {
+        #about .box:nth-child(4) {
           order: 1; } }
     @media (max-width: 480px) {
-      .about .box {
+      #about .box {
         width: 100%;
         height: 250px; } }
-  .about .about_person {
+  #about .about_person {
     padding: 3%; }
     @media (max-width: 480px) {
-      .about .about_person {
+      #about .about_person {
         padding: 6%; } }
-  .about .person_description {
+  #about .person_description {
     font-family: "Cardo" Arial, sans-serif;
     line-height: 1.6rem;
     padding: 20px;
     position: relative; }
-  .about .ewelina, .about .piotrek {
+  #about .ewelina, #about .piotrek {
     background-position: center center;
     background-repeat: no-repeat; }
-  .about .ewelina {
+  #about .ewelina {
     background-image: url(../img/ewelina.jpg); }
-  .about .piotrek {
+  #about .piotrek {
     background-image: url(../img/piotrek.jpg); }
 
 /*# sourceMappingURL=app.css.map */
