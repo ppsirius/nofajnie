@@ -1,26 +1,58 @@
 #contact
   background-color: $dark_blue
-  color: $light_blue
-  text-align: center
-  padding: 40px 0
-  img 
-    padding: 40px 0
-  h2, h5, a 
-    color: $light_blue
-  a 
-    text-transform: none
-    text-decoration: none
-  h5
-    padding: 10px 0
-  h2 
-    padding-bottom: 30px
-  .logo_contact 
-    fill: #00ffff
-  .social
+  color: #fff
+  padding: 50px 20px 0
+  .contact_container
+    max-width: 680px
+    margin: 0 auto
+    overflow: hidden 
+    .footer_logo 
+      width: 100px
+      float: right
     a 
-      padding: 0 10px 
-    img
-      width: 30px
+      color: $light_blue
+      text-transform: none
+      text-decoration: none
+    h2
+      display: block
+      float: left
+      padding-top: 30px
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        bottom: -30px
+        height: 1px
+        width: 30px
+        background-color: $light_blue
+    h3
+      color: $light_blue
+      display: block
+      margin-top: 10px
+    .ask
+      padding: 20px 0 
+      display: block
+      clear: both
+    .contact_line
+      width: 50%
+      float: left
+      padding-top: 35px
+      @media (max-width: 768px)
+        width: 100%
+    .social
+      clear: both
+      display: -webkit-box      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box         /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox      /* TWEENER - IE 10 */
+      display: -webkit-flex     /* NEW - Chrome */
+      display: flex            /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      -webkit-box-pack: justify
+      -webkit-justify-content: space-between
+      -ms-flex-pack: justify
+      justify-content: space-between
+      padding: 40px 0
+      img
+        width: 30px
 
 
      

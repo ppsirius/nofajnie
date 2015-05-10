@@ -1,42 +1,82 @@
 #about
   clear: both
-  background: $light_blue
-  float: left
+  background: $dark_blue
   margin-left: auto
   margin-right: auto
-  display: flex
-  flex-wrap: wrap
-  align-items: stretch
-  .box
-    width: 25%
-    float: left
-    color: $dark_blue
-    height:auto
-    overflow: hidden
-    @media (max-width: 980px) and  (min-width: 480px)
-      width: 50%
-      &:nth-child(3)
-        order: 2
-      &:nth-child(4)
-        order: 1
-    @media (max-width: 480px)
-      width: 100%
-      height: 250px  
-  .about_person
-    padding: 3%
-    @media (max-width: 480px)
-      padding: 6%
-  .person_description
-    font-family: $cardo
-    line-height: 1.6rem
-    padding: 20px 
-    position: relative
-  %person_img
-    background-position: center center
+  position: relative
+  .about_bg
+    background-image: url(../img/nofajnie_illustration.svg)
+    background-color: #fff
     background-repeat: no-repeat
-  .ewelina
-    background-image: url(../img/ewelina.jpg) 
-    @extend %person_img
-  .piotrek
-    background-image: url(../img/piotrek.jpg) 
-    @extend %person_img
+    background-size: 100% auto
+    background-position: bottom
+    width: 100%
+    color: $dark_blue
+    @media (max-width: 480px)
+      background-image: url(../img/nofajnie_illustration_mobile.svg)
+    .about_text
+      text-align: center
+      margin: 0 auto
+      max-width: 600px
+      padding: 5% 10px 40%
+      @media (max-width: 480px)
+        padding: 15% 10px 130%
+      span
+        font-size: 1.2rem
+        line-height: 2.2rem
+  .about_content
+    display: -webkit-box      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox      /* TWEENER - IE 10 */
+    display: -webkit-flex     /* NEW - Chrome */
+    display: flex            /* NEW, Spec - Opera 12.1, Firefox 20+ */
+    -webkit-flex-wrap: wrap
+    -moz-flex-wrap: wrap
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+    -webkit-flex-align: stretch
+    -ms-flex-align: stretch
+    -webkit-align-items: stretch
+    align-items: stretch
+    .box
+      width: 25%
+      color: $light_blue
+      height:auto
+      overflow: hidden
+      @media (max-width: 980px) and  (min-width: 480px)
+        width: 50%
+        &:nth-child(3)
+          -webkit-box-ordinal-group: 2   /* OLD - iOS 6-, Safari 3.1-6 */
+          -moz-box-ordinal-group: 2     /* OLD - Firefox 19- */
+          -ms-flex-order: 2            /* TWEENER - IE 10 */
+          -webkit-order: 2               /* NEW - Chrome */
+          order: 2                       /* NEW, Spec - Opera 12.1, Firefox 20+ */
+        &:nth-child(4)
+          -webkit-box-ordinal-group: 1  
+          -moz-box-ordinal-group: 1     
+          -ms-flex-order: 1    
+          -webkit-order: 1  
+          order: 1
+      @media (max-width: 480px)
+        width: 100%
+    .about_person
+      padding: 3%
+      @media (max-width: 480px)
+        padding: 6%
+      h5
+        text-transform: none
+    .person_description
+      color: #fff
+      font-family: $ptsans
+      line-height: 1.6rem
+      padding: 20px 
+      position: relative
+    %person_img
+      background-position: center center
+      background-repeat: no-repeat
+    .ewelina
+      background-image: url(../img/ewelina.jpg) 
+      @extend %person_img
+    .piotrek
+      background-image: url(../img/piotrek.jpg) 
+      @extend %person_img

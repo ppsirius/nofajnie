@@ -25,6 +25,9 @@ svg
   height: 100%
   user-select: none
   cursor: all-scroll
+  overflow:hidden
+  &::-webkit-scrollbar
+    display: none
 
 .slider-control
   z-index: 999
@@ -201,9 +204,7 @@ $color_slide_4: rgba(45,56,122, 0.9)
 
 .slide__text-desc
   margin-bottom: 1.5rem
-  font-family: $cardo
-  font-size: 1.2rem
-  line-height: 1.8rem
+  font-family: $montserrat
 
 @media (max-width: 980px)
   .slide__text-desc
